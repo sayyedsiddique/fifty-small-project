@@ -1,0 +1,23 @@
+.card-container {
+  display: flex;
+  width: 90vw;
+}
+
+.card {
+  background-image: url("https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 0.5;
+  height: 80vh;
+  border-radius: 50px;
+  cursor: pointer;
+  /* transition: flex 0.7s ease-in; */
+  /* -webkit-transition: width .4s; */
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s;
+}
+.card.active {
+  flex: 5;
+}
