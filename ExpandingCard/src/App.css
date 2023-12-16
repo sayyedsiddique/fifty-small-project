@@ -21,3 +21,17 @@
 .card.active {
   flex: 5;
 }
+
+.title{
+  display: none;
+}
+
+.title.active {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem
+}
