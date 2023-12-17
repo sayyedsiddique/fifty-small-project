@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   flex-direction: column;
   gap: 30px;
@@ -28,6 +28,14 @@
 
 .circle.active {
   border-color: #3498db;
+}
+
+.progress{
+  position: absolute;
+  height: 3px;
+  /* width: 100%; */
+  background-color: #3498db;
+  z-index: -1;
 }
 
 .circle {
