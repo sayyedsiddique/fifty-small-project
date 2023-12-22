@@ -1,0 +1,39 @@
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #775BEF;
+}
+
+.child{
+    /* width: 215px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 0 10px;
+}
+
+.child input{
+    padding: 7px;
+    border: none;
+}
+
+.child input:focus{
+    outline: none;
+}
+
+.child input::placeholder{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(100, 100, 100);
+}
+
+.icon-container{
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
