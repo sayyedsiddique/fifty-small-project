@@ -12,18 +12,13 @@ function App() {
   return (
     <div className="parent">
       <div className={activeSearch ? "child active" : "child"}>
-        <div
-          className={
-            activeSearch ? "input-container active" : "input-container"
-          }
-        >
-          <input className="searchInput active" type="search" placeholder="Search..." />
-        </div>
-        <div className="icon-container" onClick={searchHandler}>
-          <IconContext.Provider value={{ size: "30px" }}>
+        <input className="searchInput" type="text" placeholder="Search..." />
+
+        <button className="icon-btn" onClick={searchHandler}>
+          <IconContext.Provider value={{ size: "24px" }}>
             <FaSearch />
           </IconContext.Provider>
-        </div>
+        </button>
       </div>
     </div>
   );
