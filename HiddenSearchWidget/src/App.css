@@ -5,35 +5,67 @@
   width: 100%;
   height: 100vh;
   margin: 0;
-  background-color: #775BEF;
+  background-color: #775bef;
 }
 
-.child{
-    /* width: 215px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 0 10px;
+.child {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0 10px;
+  /* -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; */
+  transition: width 0.3s ease;
 }
 
-.child input{
-    padding: 7px;
-    border: none;
+.child.active {
+  width: 230px;
+  transition: width 0.3s ease;
 }
 
-.child input:focus{
-    outline: none;
+/* .child .input-container {
+  display: none;
 }
 
-.child input::placeholder{
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: rgb(100, 100, 100);
+.child .input-container.active {
+  display: block;
+} */
+
+.child .input-container {
+  width: 0px;
 }
 
-.icon-container{
-    padding: 5px;
-    margin-top: 5px;
-    cursor: pointer;
+.child .input-container.active {
+  width: 100%;
+}
+
+.child .input-container .searchInput {
+  width: 0px;
+  padding: 7px;
+  border: none;
+}
+
+.child .input-container .searchInput.active {
+  width: 100%;
+  padding: 7px;
+  border: none;
+}
+
+.child .input-container .searchInput:focus {
+  outline: none;
+}
+
+.child .input-container input::placeholder {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(100, 100, 100);
+}
+
+.icon-container {
+  padding: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: width 0.3s ease;
 }
