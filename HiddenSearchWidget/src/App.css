@@ -22,6 +22,7 @@
   background: white;
   padding: 15px;
   font-size: 18px;
+  outline: none;
   transition: width 0.3s ease;
 }
 
