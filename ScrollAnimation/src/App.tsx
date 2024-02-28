@@ -2,24 +2,25 @@ import React, { useEffect, useRef } from "react";
 import "./App.css";
 
 function App() {
-  const boxRefs = useRef<Array<React.MutableRefObject<HTMLDivElement | null>>>([]);
-
+  const boxRefs = useRef<Array<React.MutableRefObject<HTMLDivElement | null>>>(
+    []
+  );
 
   useEffect(() => {
     const checkBoxes = () => {
-      const triggerBottom = window.innerHeight / 5 * 4;
-      console.log("boxRefs ", boxRefs)
+      const triggerBottom = (window.innerHeight / 5) * 4;
+      console.log("boxRefs ", boxRefs);
 
       boxRefs.current.map((box: any) => {
-        // console.log("SINGLEboxRef ", box && box.current) 
+        // console.log("SINGLEboxRef ", box && box.current)
         if (box && box.current) {
           const boxTop = box.current.getBoundingClientRect().top;
-          console.log("boxTop ", boxTop)
+          console.log("boxTop ", boxTop);
 
           if (boxTop < triggerBottom) {
-            box && box.current.classList.add('show')
+            box && box.current.classList.add("show");
           } else {
-            box && box.current.classList.remove('show')
+            box && box.current.classList.remove("show");
           }
         }
       });
@@ -36,7 +37,7 @@ function App() {
     };
   }, []);
 
-  // addBoxRef function creates a new React.MutableRefObject for each element 
+  // addBoxRef function creates a new React.MutableRefObject for each element
   // and assigns the element reference to it
   const addBoxRef = (element: HTMLDivElement | null) => {
     if (element) {
