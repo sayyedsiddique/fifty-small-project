@@ -20,6 +20,8 @@
 .box{
   min-width: 150px;
   color: rgb(49, 49, 49);
+}
 
-
+.key{
+  color: rgb(49, 49, 49);
 }
